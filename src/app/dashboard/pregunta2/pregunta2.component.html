@@ -1,1 +1,15 @@
-<p>pregunta2 works!</p>
+<mat-card class="container">
+  <h2>Calculadora de Precio de Llantas</h2>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Cantidad de Llantas a Comprar</mat-label>
+    <input matInput type="number" [(ngModel)]="cantidad">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="calcularTotal()">Calcular Total</button>
+
+
+  @if (total) {
+    <h3>El total es: {{ total }}</h3>
+  }
+</mat-card>
