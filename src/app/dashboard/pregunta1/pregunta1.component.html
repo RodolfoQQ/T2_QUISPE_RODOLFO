@@ -1,1 +1,21 @@
-<p>pregunta1 works!</p>
+<mat-card class="container">
+  <h2>Calculadora de Precio con Descuento</h2>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Precio Unitario </mat-label>
+    <input matInput type="number" [(ngModel)]="precioUnitario">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Cantidad</mat-label>
+    <input matInput type="number" [(ngModel)]="cantidad">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="calcularTotal()">Calcular Total</button>
+  @if (total) {
+    <h3>Total a Pagar: {{ total}}</h3>
+
+  }
+
+
+</mat-card>
