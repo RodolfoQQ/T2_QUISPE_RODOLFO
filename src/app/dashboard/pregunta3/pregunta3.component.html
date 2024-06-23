@@ -1,1 +1,19 @@
-<p>pregunta3 works!</p>
+<mat-card class="container">
+  <h2>pregunta 4</h2>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Cantidad de Artículos</mat-label>
+    <input matInput type="number" [(ngModel)]="cantidad">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Precio por Artículo</mat-label>
+    <input matInput type="number" [(ngModel)]="precio">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="calcularTotal()">Calcular Total</button>
+
+  @if (total) {
+    {{total}}
+  }
+</mat-card>
